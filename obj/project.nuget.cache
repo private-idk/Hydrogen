@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ScVUEfclc4c=",
+  "success": true,
+  "projectFilePath": "/home/delta/.local/share/Terraria/tModLoader/ModSources/Hydrogen/Hydrogen.csproj",
+  "expectedPackageFiles": [
+    "/home/delta/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.25/microsoft.aspnetcore.app.ref.8.0.25.nupkg.sha512"
+  ],
+  "logs": []
+}

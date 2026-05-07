@@ -1,0 +1,6 @@
+Buffs: {
+	DrowConsequencesDebuff: {
+		DisplayName: Последствия утопления
+		Description: При повторном входе в воду вы практически моментально начнете задыхаться
+	}
+}
