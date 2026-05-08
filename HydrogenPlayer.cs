@@ -6,6 +6,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
+using Terraria.ModLoader.IO;
 
 namespace Hydrogen;
 
@@ -22,7 +23,7 @@ public class HydrogenPlayer : ModPlayer
     private int _starveTimer = 0;
 
     [Range(0, maxStarve)]
-    private static int _starve = 30;    
+    private static int _starve;    
 
     /// <summary>
     /// Устанавливается true, если игрок тонет
@@ -34,6 +35,17 @@ public class HydrogenPlayer : ModPlayer
     /// </summary>
     public static int Starve { get => _starve; }
 
+    public override void SaveData(TagCompound tag)
+    {
+        tag["Mods.Hydrogen.StarveValue"] = _starve;
+    }
+    public override void LoadData(TagCompound tag)
+    {
+        if (!tag.ContainsKey("Mods.Hydrogen.StarveValue"))
+            tag.Add("Mods.Hydrogen.StarveValue", 100);
+
+        _starve = (int)tag["Mods.Hydrogen.StarveValue"];
+    }
     public override void PreUpdate()
     {
         _oldBreath = Player.breath;
@@ -82,5 +94,9 @@ public class HydrogenPlayer : ModPlayer
                 _starveTimer = 0;
             }
         }
+    }
+    public override void OnRespawn()
+    {
+        _starve = 10;
     }
 }
