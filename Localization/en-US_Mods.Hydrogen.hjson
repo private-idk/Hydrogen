@@ -4,3 +4,5 @@ Buffs: {
 		Description: Mods.Hydrogen.Buffs.DrowConsequencesDebuff.Description
 	}
 }
+
+DeathReasons.ByStarving: "{0} died of hunger"
