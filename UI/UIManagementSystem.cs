@@ -16,11 +16,11 @@ public class UIManagementSystem : ModSystem
         {
             // Waiting for sprites
 
-            // layers.Insert(mouseIndex, new LegacyGameInterfaceLayer("Hydrogen: Starve Bar", delegate
-            // {
-            //     StarveUI.Draw(Main.spriteBatch);
-            //     return true;
-            // }, InterfaceScaleType.UI));
+            layers.Insert(mouseIndex, new LegacyGameInterfaceLayer("Hydrogen: Starve Bar", delegate
+            {
+                StarveUI.Draw(Main.spriteBatch);
+                return true;
+            }, InterfaceScaleType.UI));
 
             // layers.Insert(mouseIndex, new LegacyGameInterfaceLayer("Hydrogen: Thirst Bar", delegate
             // {
