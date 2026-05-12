@@ -4,7 +4,7 @@ Buffs: {
 		Description: При повторном входе в воду вы практически моментально начнете задыхаться
 	}
 }
-
+DeathReasons.ByThirst: "{0} умер от жажды"
 DeathReasons.ByStarving: "{0} умер от голода"
 Stats.Forging: Ковка
 

@@ -1,0 +1,30 @@
+﻿Buffs: {
+	DrowConsequencesDebuff: {
+		DisplayName: Conséquences de la noyade
+		Description: Si vous entrez à nouveau dans l'eau, vous étoufferez instantanément
+	}
+}
+DeathReasons.ByThirst: "{0} est mort de soif"
+DeathReasons.ByStarving: "{0} est mort de faim"
+Stats.Forging: Forgeage
+
+Configs: {
+	HydrogenConfig: {
+		// DisplayName: Hydrogen Config
+
+		StatUIPositionX: {
+			// Label: Stat U I Position X
+			// Tooltip: ""
+		}
+
+		StatUIPositionY: {
+			// Label: Stat U I Position Y
+			// Tooltip: ""
+		}
+
+		BarsOffset: {
+			// Label: Bars Offset
+			// Tooltip: ""
+		}
+	}
+}
