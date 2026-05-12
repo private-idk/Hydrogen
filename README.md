@@ -1,5 +1,5 @@
 # Hydrogen
-Hydrogen - мод добавляющий множество механик, нацеленных на усложнение игры.
+Hydrogen is a mod that adds a variety of mechanics aimed at making the game more difficult.
 
-В данный момент мод находится в стадии разработки.
+At the moment the mod is under development
 
