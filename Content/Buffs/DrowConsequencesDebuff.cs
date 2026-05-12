@@ -2,7 +2,7 @@ using System;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace Hydrogen.Content.Debuffs;
+namespace Hydrogen.Content.Buffs;
 
 public class DrowConsequencesDebuff : ModBuff
 {
