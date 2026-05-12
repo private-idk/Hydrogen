@@ -6,10 +6,7 @@ Buffs: {
 }
 
 DeathReasons.ByStarving: "{0} умер от голода"
-
-Stats: {
-	Forging: "Ковка"
-}
+Stats.Forging: Ковка
 
 Configs: {
 	HydrogenConfig: {

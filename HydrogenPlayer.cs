@@ -26,6 +26,7 @@ public class HydrogenPlayer : ModPlayer
     private static bool _isDrowning;    
 
     private int _starveTimer = 0;
+    private int _thirstTimer = 0;
 
     [Range(0, maxStarve)]
     private static int _starve;
@@ -46,7 +47,7 @@ public class HydrogenPlayer : ModPlayer
     /// <summary>
     /// Насколько обезвожен игрок. 100 - максимально напоен
     /// </summary>
-    public static int Thirst { get => _thirst; }
+    public static int Thirst { get => _thirst; set => _thirst = value; }
 
     public override void SaveData(TagCompound tag)
     {
@@ -110,6 +111,28 @@ public class HydrogenPlayer : ModPlayer
                 Player.Hurt(PlayerDeathReason.ByCustomReason(NetworkText.FromKey("Mods.Hydrogen.DeathReasons.ByStarving", Player.name)), Player.statLifeMax / 10, 0);
 
                 _starveTimer = 0;
+            }
+        }
+        if (_thirst > 0)
+        {
+            if (_thirstTimer < 10080)
+                _thirstTimer += 1;
+            else
+            {
+                _thirst -= 1;
+
+                _thirstTimer = 0;
+            }
+        }
+        else
+        {
+            if (_thirstTimer < 300)
+                _thirstTimer += 1;
+            else
+            {
+                Player.Hurt(PlayerDeathReason.ByCustomReason(NetworkText.FromKey("Mods.Hydrogen.DeathReasons.ByThirst", Player.name)), Player.statLifeMax / 10, 0);
+
+                _thirstTimer = 0;
             }
         }
     }

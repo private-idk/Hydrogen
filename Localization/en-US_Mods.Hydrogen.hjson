@@ -6,10 +6,7 @@ Buffs: {
 }
 
 DeathReasons.ByStarving: "{0} died of hunger"
-
-Stats: {
-	Forging: "Forging"
-}
+Stats.Forging: Forging
 
 Configs: {
 	HydrogenConfig: {
