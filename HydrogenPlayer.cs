@@ -1,6 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations;
-using Hydrogen.Content.Debuffs;
+using Hydrogen.Content.Buffs;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
