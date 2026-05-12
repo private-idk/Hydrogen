@@ -1,6 +1,6 @@
 using System;
 
-namespace Hydrogen.API.Stats;
+namespace Hydrogen.Content.Skills;
 
 public class StatID
 {

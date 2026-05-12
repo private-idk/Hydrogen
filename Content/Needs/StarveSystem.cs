@@ -1,10 +1,8 @@
-using System;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Hydrogen.Common.Stats;
+namespace Hydrogen.Content.Needs;
 
 public class StarveSystem : GlobalItem
 {

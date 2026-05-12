@@ -1,13 +1,10 @@
-using System;
-using System.IO;
-using Hydrogen.UI.StarveBar;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace Hydrogen.UI.StatBars;
+namespace Hydrogen.UI.NeedBars;
 
 public class ThirstUI : ModSystem
 {

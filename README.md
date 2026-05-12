@@ -16,3 +16,6 @@ Hydrogen est un mod qui ajoute une variété de mécanismes visant à rendre le 
 Actuellement, le mod est en développement
 
 
+
+## Development
+[Documentation](./DOCUMENTATION.md)

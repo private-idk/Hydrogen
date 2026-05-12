@@ -8,14 +8,9 @@
 		
 	</PropertyGroup>
 	<ItemGroup>
-	  <Folder Include="API/" />
-	  <Folder Include="API/Stats/" />
-	  <Folder Include="Commands/" />
 	  <Folder Include="Common/" />
-	  <Folder Include="Common/NPCs/" />
-	  <Folder Include="Common/NPCs/Bosses/" />
-	  <Folder Include="Common/Stats/" />
-	  <Folder Include="UI/StatBars/" />
+	  <Folder Include="Common/Commands/" />
+	  <Folder Include="UI/NeedBars/" />
 	</ItemGroup>
 
 	<!-- References -->

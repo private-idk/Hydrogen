@@ -1,11 +1,11 @@
 using System;
 using Terraria.Localization;
 
-namespace Hydrogen.API.Stats;
+namespace Hydrogen.Content.Skills;
 
 public class ForgingStat : StatBase
 {
-    public override int Id => 0;
+    public override int Id => StatID.Forging;
 
     public override string Name => Language.GetTextValue("Mods.Hydrogen.Stats.Forging");
 
