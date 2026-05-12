@@ -6,3 +6,28 @@ Buffs: {
 }
 
 DeathReasons.ByStarving: "{0} died of hunger"
+
+Stats: {
+	Forging: "Forging"
+}
+
+Configs: {
+	HydrogenConfig: {
+		DisplayName: Hydrogen Config
+
+		StatUIPositionX: {
+			Label: Stat U I Position X
+			Tooltip: ""
+		}
+
+		StatUIPositionY: {
+			Label: Stat U I Position Y
+			Tooltip: ""
+		}
+
+		BarsOffset: {
+			Label: Bars Offset
+			Tooltip: ""
+		}
+	}
+}

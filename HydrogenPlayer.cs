@@ -17,13 +17,21 @@ public class HydrogenPlayer : ModPlayer
     /// </summary>
     public const int maxStarve = 100;
 
+    /// <summary>
+    /// Максимальное значение жажды у игрока
+    /// </summary>
+    public const int maxThirst = 100;
+
     private static int _oldBreath;
     private static bool _isDrowning;    
 
     private int _starveTimer = 0;
 
     [Range(0, maxStarve)]
-    private static int _starve;    
+    private static int _starve;
+
+    [Range(0, maxThirst)]
+    private static int _thirst;    
 
     /// <summary>
     /// Устанавливается true, если игрок тонет
@@ -33,19 +41,29 @@ public class HydrogenPlayer : ModPlayer
     /// <summary>
     /// Насколько голоден игрок. 100 - максимально сыт
     /// </summary>
-    public static int Starve { get => _starve; }
+    public static int Starve { get => _starve; set => _starve = value; }
+    
+    /// <summary>
+    /// Насколько обезвожен игрок. 100 - максимально напоен
+    /// </summary>
+    public static int Thirst { get => _thirst; }
 
     public override void SaveData(TagCompound tag)
     {
         tag["Mods.Hydrogen.StarveValue"] = _starve;
+        tag["Mods.Hydrogen.ThirstValue"] = _thirst;
     }
     public override void LoadData(TagCompound tag)
     {
         if (!tag.ContainsKey("Mods.Hydrogen.StarveValue"))
             tag.Add("Mods.Hydrogen.StarveValue", 100);
+        if (!tag.ContainsKey("Mods.Hydrogen.ThirstValue"))
+            tag.Add("Mods.Hydrogen.ThirstValue", 100);
 
         _starve = (int)tag["Mods.Hydrogen.StarveValue"];
+        _thirst = (int)tag["Mods.Hydrogen.ThirstValue"];
     }
+
     public override void PreUpdate()
     {
         _oldBreath = Player.breath;
@@ -98,5 +116,6 @@ public class HydrogenPlayer : ModPlayer
     public override void OnRespawn()
     {
         _starve = 10;
+        _thirst = 10;
     }
 }

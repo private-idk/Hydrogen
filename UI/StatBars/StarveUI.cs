@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
@@ -11,13 +12,15 @@ public class StarveUI : ModSystem
 {
     private static Texture2D starveTex;
 
-    private static float starveOffset;
+    public static float generalXOffset;
+    public static float generalYOffset;
 
     public override void OnModLoad()
     {
-        starveTex = ModContent.Request<Texture2D>($"Terraria/Images/Item_{ItemID.Burger}").Value;
+        starveTex = ModContent.Request<Texture2D>($"Terraria/Images/Item_{ItemID.Apple}").Value;
 
-        starveOffset = Main.inventoryScale * 52f * 10f + 150f;
+        generalXOffset = Main.screenWidth / 4f;
+        generalYOffset = Main.inventoryScale * 52f;
     }
 
     public override void OnModUnload()
@@ -27,7 +30,7 @@ public class StarveUI : ModSystem
 
     public static void Draw(SpriteBatch spriteBatch)
     {
-        var bar = Utils.CenteredRectangle(new Vector2(starveOffset + starveTex.Width * 3.5f, Main.inventoryScale * 78f), new Vector2(starveTex.Width * 5f, starveTex.Height / 2));
+        var bar = Utils.CenteredRectangle(new Vector2(generalXOffset + starveTex.Width * 3.5f, Main.inventoryScale * 78f), new Vector2(starveTex.Width * 5f, starveTex.Height / 2));
 
         for (int i = 1; i < HydrogenPlayer.maxStarve / 20 + 1; i++)
         {
@@ -50,7 +53,7 @@ public class StarveUI : ModSystem
             }
 
             spriteBatch.Draw(starveTex,
-                new Vector2(starveOffset + starveTex.Width * i, Main.inventoryScale * 52f),
+                new Vector2(generalXOffset + starveTex.Width * i, Main.inventoryScale * 52f),
                 new Rectangle(0, 0, starveTex.Width, starveTex.Height / 3),
                 color);
             
