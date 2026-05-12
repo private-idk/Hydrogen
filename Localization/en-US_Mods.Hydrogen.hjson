@@ -4,8 +4,12 @@ Buffs: {
 		Description: Mods.Hydrogen.Buffs.DrowConsequencesDebuff.Description
 	}
 }
-DeathReasons.ByThirst: "{0} died of thirst"
-DeathReasons.ByStarving: "{0} died of hunger"
+
+DeathReasons: {
+	ByThirst: "{0} died of thirst"
+	ByStarving: "{0} died of hunger"
+}
+
 Stats.Forging: Forging
 
 Configs: {
