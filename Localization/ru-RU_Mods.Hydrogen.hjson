@@ -3,6 +3,11 @@ Buffs: {
 		DisplayName: Последствия утопления
 		Description: При повторном входе в воду вы практически моментально начнете задыхаться
 	}
+
+	PlayerSlimedDebuff: {
+		DisplayName: Player Slimed Debuff
+		Description: Mods.Hydrogen.Buffs.PlayerSlimedDebuff.Description
+	}
 }
 
 DeathReasons: {
@@ -14,21 +19,21 @@ Stats.Forging: Ковка
 
 Configs: {
 	HydrogenConfig: {
-		// DisplayName: Hydrogen Config
+		DisplayName: Hydrogen Config
 
-		StatUIPositionX: {
-			// Label: Stat U I Position X
-			// Tooltip: ""
+		NeedsUIPositionX: {
+			Label: Stat UI Position X
+			Tooltip: ""
 		}
 
-		StatUIPositionY: {
-			// Label: Stat U I Position Y
-			// Tooltip: ""
+		NeedsUIPositionY: {
+			Label: Stat UI Position Y
+			Tooltip: ""
 		}
 
 		BarsOffset: {
-			// Label: Bars Offset
-			// Tooltip: ""
+			Label: Bars Offset
+			Tooltip: ""
 		}
 	}
 }

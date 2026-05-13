@@ -3,6 +3,11 @@ Buffs: {
 		DisplayName: Conséquences de la noyade
 		Description: Si vous entrez à nouveau dans l'eau, vous étoufferez instantanément
 	}
+
+	PlayerSlimedDebuff: {
+		DisplayName: Player Slimed Debuff
+		Description: Mods.Hydrogen.Buffs.PlayerSlimedDebuff.Description
+	}
 }
 
 DeathReasons: {
@@ -14,21 +19,21 @@ Stats.Forging: Forgeage
 
 Configs: {
 	HydrogenConfig: {
-		// DisplayName: Hydrogen Config
+		DisplayName: Hydrogen Config
 
-		StatUIPositionX: {
-			// Label: Stat U I Position X
-			// Tooltip: ""
+		NeedsUIPositionX: {
+			Label: Stat UI Position X
+			Tooltip: ""
 		}
 
-		StatUIPositionY: {
-			// Label: Stat U I Position Y
-			// Tooltip: ""
+		NeedsUIPositionY: {
+			Label: Stat UI Position Y
+			Tooltip: ""
 		}
 
 		BarsOffset: {
-			// Label: Bars Offset
-			// Tooltip: ""
+			Label: Bars Offset
+			Tooltip: ""
 		}
 	}
 }

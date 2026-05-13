@@ -3,6 +3,11 @@ Buffs: {
 		DisplayName: Drow Consequences Debuff
 		Description: Mods.Hydrogen.Buffs.DrowConsequencesDebuff.Description
 	}
+
+	PlayerSlimedDebuff: {
+		DisplayName: Player Slimed Debuff
+		Description: Mods.Hydrogen.Buffs.PlayerSlimedDebuff.Description
+	}
 }
 
 DeathReasons: {
@@ -16,13 +21,13 @@ Configs: {
 	HydrogenConfig: {
 		DisplayName: Hydrogen Config
 
-		StatUIPositionX: {
-			Label: Stat U I Position X
+		NeedsUIPositionX: {
+			Label: Needs UI Position X
 			Tooltip: ""
 		}
 
-		StatUIPositionY: {
-			Label: Stat U I Position Y
+		NeedsUIPositionY: {
+			Label: Needs UI Position Y
 			Tooltip: ""
 		}
 

@@ -1,5 +1,3 @@
-using System;
-using System.ComponentModel.DataAnnotations;
 using Hydrogen.Content.Buffs;
 using Terraria;
 using Terraria.DataStructures;
@@ -28,10 +26,8 @@ public class HydrogenPlayer : ModPlayer
     private int _starveTimer = 0;
     private int _thirstTimer = 0;
 
-    [Range(0, maxStarve)]
     private static int _starve;
 
-    [Range(0, maxThirst)]
     private static int _thirst;    
 
     /// <summary>
@@ -42,12 +38,28 @@ public class HydrogenPlayer : ModPlayer
     /// <summary>
     /// Насколько голоден игрок. 100 - максимально сыт
     /// </summary>
-    public static int Starve { get => _starve; set => _starve = value; }
+    public static int Starve { get => _starve;
+        set
+        {
+            if (_starve + value > maxStarve)
+                _starve = maxStarve;
+            else
+                _starve += value;
+        }
+    }
     
     /// <summary>
     /// Насколько обезвожен игрок. 100 - максимально напоен
     /// </summary>
-    public static int Thirst { get => _thirst; set => _thirst = value; }
+    public static int Thirst { get => _thirst; 
+        set
+        {
+            if (_thirst + value > maxThirst)
+                _thirst = maxThirst;
+            else
+                _thirst += value;
+        } 
+    }
 
     public override void SaveData(TagCompound tag)
     {

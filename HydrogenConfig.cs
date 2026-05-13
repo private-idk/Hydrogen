@@ -1,6 +1,4 @@
 using System;
-using System.Numerics;
-using Terraria;
 using Terraria.ModLoader.Config;
 
 namespace Hydrogen;
@@ -12,10 +10,10 @@ public class HydrogenConfig : ModConfig
     public override ConfigScope Mode => ConfigScope.ClientSide;
 
     [Range(0, 2560)]
-    public int StatUIPositionX;
+    public int NeedsUIPositionX;
 
     [Range(0, 1440)]
-    public int StatUIPositionY;
+    public int NeedsUIPositionY;
 
     [Range(0, 200)]
     public int BarsOffset;

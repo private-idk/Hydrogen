@@ -8,7 +8,6 @@
 		
 	</PropertyGroup>
 	<ItemGroup>
-	  <Folder Include="Common/" />
 	  <Folder Include="Common/Commands/" />
 	  <Folder Include="UI/NeedBars/" />
 	</ItemGroup>
