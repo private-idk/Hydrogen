@@ -114,6 +114,8 @@ public class HydrogenPlayer : ModPlayer
                 _starveTimer = 0;
             }
         }
+        else if (_starve > maxStarve)
+            _starve = maxStarve;
         else
         {
             if (_starveTimer < 300)
@@ -136,6 +138,8 @@ public class HydrogenPlayer : ModPlayer
                 _thirstTimer = 0;
             }
         }
+        else if (_thirst > maxThirst)
+            _thirst = maxThirst;
         else
         {
             if (_thirstTimer < 300)
