@@ -8,7 +8,7 @@ namespace Hydrogen.UI.NeedBars;
 
 public class StarveUI : ModSystem
 {
-    private static Texture2D starveTex;
+    public static Texture2D starveTex;
 
     public static float generalXOffset;
     public static float generalYOffset;
@@ -22,8 +22,8 @@ public class StarveUI : ModSystem
         generalYOffset = 100f;
 
         mouseRectangle = Utils.CenteredRectangle(
-            new Vector2(generalXOffset + starveTex.Width * 3.5f, generalYOffset - generalYOffset / 2),
-            new Vector2(starveTex.Width * 5f, starveTex.Height / 2));
+            new Vector2(generalXOffset + starveTex.Width * 3.5f, generalYOffset - starveTex.Height / 1.5f),
+            new Vector2(starveTex.Width * 5f, starveTex.Height / 3));
     }
 
     public override void OnModUnload()

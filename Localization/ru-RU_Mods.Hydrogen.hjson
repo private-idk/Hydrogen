@@ -5,8 +5,8 @@ Buffs: {
 	}
 
 	PlayerSlimedDebuff: {
-		DisplayName: Player Slimed Debuff
-		Description: Mods.Hydrogen.Buffs.PlayerSlimedDebuff.Description
+		DisplayName: Слизь
+		Description: Вы легко воспламеняемы
 	}
 }
 
@@ -22,18 +22,18 @@ Configs: {
 		DisplayName: Hydrogen Config
 
 		NeedsUIPositionX: {
-			Label: Stat UI Position X
-			Tooltip: ""
+			// Label: Needs UI Position X
+			// Tooltip: ""
 		}
 
 		NeedsUIPositionY: {
-			Label: Stat UI Position Y
-			Tooltip: ""
+			// Label: Needs UI Position Y
+			// Tooltip: ""
 		}
 
 		BarsOffset: {
-			Label: Bars Offset
-			Tooltip: ""
+			Label: Отступ между шкалами
+			Tooltip: Между шкалой голода и жажды
 		}
 	}
 }
