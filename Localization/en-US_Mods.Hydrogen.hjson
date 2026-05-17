@@ -8,6 +8,11 @@ Buffs: {
 		DisplayName: Player Slimed Debuff
 		Description: Mods.Hydrogen.Buffs.PlayerSlimedDebuff.Description
 	}
+
+	NotHungryDebuff: {
+		DisplayName: Not hungry
+		Description: Mods.Hydrogen.Buffs.NotHungryDebuff.Description
+	}
 }
 
 DeathReasons: {

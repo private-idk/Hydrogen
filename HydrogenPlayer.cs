@@ -1,3 +1,4 @@
+using Hydrogen.Common.GlobalItems;
 using Hydrogen.Content.Buffs;
 using Terraria;
 using Terraria.DataStructures;
@@ -36,26 +37,30 @@ public class HydrogenPlayer : ModPlayer
     public static bool isDrowning { get => _isDrowning; }
 
     /// <summary>
-    /// Насколько голоден игрок. 100 - максимально сыт
+    /// Степень голода игрока
     /// </summary>
     public static int Starve { get => _starve;
         set
         {
-            if (_starve + value > maxStarve)
+            if (value > maxStarve)
                 _starve = maxStarve;
+            else if (value < 0)
+                _starve = 0;
             else
-                _starve += value;
+                _starve = value;
         }
     }
     
     /// <summary>
-    /// Насколько обезвожен игрок. 100 - максимально напоен
+    /// Степень обезвоживания игрока
     /// </summary>
     public static int Thirst { get => _thirst; 
         set
         {
             if (_thirst + value > maxThirst)
                 _thirst = maxThirst;
+            else if (_thirst + value < 0)
+                _starve = 0;
             else
                 _thirst += value;
         } 
@@ -77,6 +82,12 @@ public class HydrogenPlayer : ModPlayer
         _thirst = (int)tag["Mods.Hydrogen.ThirstValue"];
     }
 
+    public override void OnEnterWorld()
+    {
+        // foreach (var item in Player.inventory)
+        //     ItemsManager.AddItem(item);
+    }
+
     public override void PreUpdate()
     {
         _oldBreath = Player.breath;
@@ -93,6 +104,7 @@ public class HydrogenPlayer : ModPlayer
             _isDrowning = false;
         }
 
+        // Паника при нехватке воздуха
         if (Player.breath == 0)
         {
             Player.AddBuff(BuffID.Confused, 2);
@@ -103,19 +115,18 @@ public class HydrogenPlayer : ModPlayer
             Player.AddBuff(ModContent.BuffType<DrowConsequencesDebuff>(), 30000);
         }
 
-        if (_starve > 0)
+        // Голодание
+        if (Starve > 0)
         {
             if (_starveTimer < 10080)
                 _starveTimer += 1;
             else
             {
-                _starve -= 1;
+                Starve -= 1;
 
                 _starveTimer = 0;
             }
         }
-        else if (_starve > maxStarve)
-            _starve = maxStarve;
         else
         {
             if (_starveTimer < 300)
@@ -127,19 +138,19 @@ public class HydrogenPlayer : ModPlayer
                 _starveTimer = 0;
             }
         }
-        if (_thirst > 0)
+
+        // Жажда
+        if (Thirst > 0)
         {
             if (_thirstTimer < 10080)
                 _thirstTimer += 1;
             else
             {
-                _thirst -= 1;
+                Thirst -= 1;
 
                 _thirstTimer = 0;
             }
         }
-        else if (_thirst > maxThirst)
-            _thirst = maxThirst;
         else
         {
             if (_thirstTimer < 300)

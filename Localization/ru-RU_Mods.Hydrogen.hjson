@@ -8,6 +8,11 @@ Buffs: {
 		DisplayName: Слизь
 		Description: Вы легко воспламеняемы
 	}
+
+	NotHungryDebuff: {
+		DisplayName: Не голоден
+		Description: Вы не хотите есть
+	}
 }
 
 DeathReasons: {
