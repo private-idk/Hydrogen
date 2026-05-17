@@ -74,19 +74,19 @@ public class StarveSystem : GlobalItem
         { ItemID.GoldenDelight, 50 },
     };
 
-    public override bool? UseItem(Item item, Player player)
+    public override bool ConsumeItem(Item item, Player player)
     {
         if (!_saturation.TryGetValue(item.type, out var sat))
-            return null;
+            return true;
 
         if (player.HasBuff(ModContent.BuffType<NotHungryDebuff>()))
-            return null;
+            return true;
 
         HydrogenPlayer.Starve += sat;
 
         if (sat > 0)
             player.AddBuff(ModContent.BuffType<NotHungryDebuff>(), sat * 3600);
 
-        return null;
+        return true;
     }
 }

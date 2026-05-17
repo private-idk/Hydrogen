@@ -10,8 +10,13 @@ Buffs: {
 	}
 
 	NotHungryDebuff: {
-		// DisplayName: Not Hungry Debuff
+		// DisplayName: Not hungry
 		// Description: Mods.Hydrogen.Buffs.NotHungryDebuff.Description
+	}
+
+	NotThirstedDebuff: {
+		// DisplayName: Not Thirsted Debuff
+		// Description: Mods.Hydrogen.Buffs.NotThirstedDebuff.Description
 	}
 }
 

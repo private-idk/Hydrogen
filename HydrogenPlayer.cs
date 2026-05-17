@@ -62,7 +62,7 @@ public class HydrogenPlayer : ModPlayer
             else if (value < 0)
                 _starve = 0;
             else
-                _thirst += value;
+                _thirst = value;
         } 
     }
 
@@ -80,12 +80,6 @@ public class HydrogenPlayer : ModPlayer
 
         _starve = (int)tag["Mods.Hydrogen.StarveValue"];
         _thirst = (int)tag["Mods.Hydrogen.ThirstValue"];
-    }
-
-    public override void OnEnterWorld()
-    {
-        // foreach (var item in Player.inventory)
-        //     ItemsManager.AddItem(item);
     }
 
     public override void PreUpdate()
