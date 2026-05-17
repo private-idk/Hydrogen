@@ -57,9 +57,9 @@ public class HydrogenPlayer : ModPlayer
     public static int Thirst { get => _thirst; 
         set
         {
-            if (_thirst + value > maxThirst)
+            if (value > maxThirst)
                 _thirst = maxThirst;
-            else if (_thirst + value < 0)
+            else if (value < 0)
                 _starve = 0;
             else
                 _thirst += value;
